@@ -1,15 +1,11 @@
-<template>
-  <div class="app-wrapper">
-    <div class="app">
-      <router-view />
-    </div>
-  </div>
-</template>
-
 <script>
+import Navigation from "./components/Navigation.vue";
+
 export default {
   name: "app",
-  components: {},
+  components: {
+    Navigation,
+  },
   data() {
     return {};
   },
@@ -19,6 +15,15 @@ export default {
   watch: {},
 };
 </script>
+
+<template>
+  <div class="app-wrapper">
+    <div class="app">
+      <Navigation />
+      <router-view />
+    </div>
+  </div>
+</template>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
